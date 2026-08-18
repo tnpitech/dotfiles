@@ -1,0 +1,57 @@
+{
+  "layer": "top",
+  "modules-left": ["hyprland/workspaces", "custom/separator","hyprland/window"],
+  "modules-center": ["clock"],
+  "modules-right": [
+    "hyprland/language", "custom/separator",
+    "pulseaudio","custom/separator",
+    "network","custom/separator",
+    "battery"],
+  "battery": {
+    "format": "bat: {capacity}%",
+  },
+  "clock": {
+    "format": "{:%H:%M %A, %B %d}"
+  },
+  "pulseaudio": {
+    "format": "vol: {volume}%",
+    "format-bluetooth": "vol: {volume}%",
+    "format-muted": "vol: muted",
+    "scroll-step": 1,
+    "on-click": "pavucontrol",
+    "ignored-sinks": ["Easy Effects Sink"]
+  },
+  "network": {
+    "format": "net: {ifname}",
+    "format-wifi": "net: {essid}",
+    "tooltip-format": "{ifname}",
+    "tooltip-format-wifi": "  {essid} {ipaddr} {signalStrength}%",
+    "tooltip-format-ethernet": "{ifname} {ipaddr}",
+    "tooltip-format-disconnected": "disconnected",
+    "format-disconnected": "net: disconnected", 
+    "on-click": "nmrs",
+    "max-length": 50
+  },
+  "hyprland/workspaces": {
+    "format": "{name}",
+    "all-outputs": true,
+    "sort-by-number": true,
+  },
+  "hyprland/language": {
+    "format": "lang: {}",
+    "format-en": "en",
+    "format-th": "th",
+    "keyboard-name": "ae68-pro-ae68-pro",
+    "on-click": "hyprctl switchxkblayout all next"
+  },
+  "hyprland/window": {
+    "format": "{class}",
+    "separate-outputs": true,
+    "icon": true,
+    "icon-size": 18
+  },
+  "custom/separator": {
+    "format": "∣",
+    "tooltip": false,
+  }
+}

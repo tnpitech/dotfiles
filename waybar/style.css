@@ -1,0 +1,65 @@
+@define-color dark #151515;
+@define-color white #d4d0d1;
+@define-color highlight #00B4E0;
+
+* {
+  border: none;
+  font-family: "FantasqueSansM Nerd Font", "JetBrainsMono Nerd Font Propo";
+  font-size: 18px;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.1s ease-out;
+}
+
+window#waybar {
+  background-color: transparent;
+}
+
+#waybar > box {
+  background-color: @dark;
+  border-bottom: 1px solid rgba(3, 3, 3, 0.5);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 1);
+  padding: 2px;
+}
+
+#workspaces button {
+  margin: 0 1px;
+  padding: 1px;
+  min-width: 20px;
+  border-radius: 0px;
+  transition: all 0.15s ease-in-out;
+}
+#workspaces button.active {
+  background: @highlight;
+  color: @dark;
+}
+#workspaces button:hover {
+  background: @white;
+  color: @dark;
+}
+
+#window {
+  margin-left: 5px;
+}
+
+#clock,
+#pulseaudio,
+#network,
+#battery,
+#language {
+  color: @white;
+}
+#battery {
+  margin-right: 2px;
+}
+
+tooltip {
+  background: @dark;
+  color: @white;
+}
+
+#custom-separator {
+  color: #494748;
+  margin: 0 2px;
+}
