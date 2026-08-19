@@ -1,16 +1,20 @@
-require("blink.cmp").setup({
-	keymap = {
-		preset = "none",
-		["<C-s>"] = { "show", "hide" },
-		["<CR>"] = { "accept", "fallback" },
-		["<C-j>"] = { "select_next", "fallback" },
-		["<C-k>"] = { "select_prev", "fallback" },
-	},
-	appearance = { nerd_font_variant = "mono" },
-	completion = {
-		menu = { auto_show = true },
-		documentation = { auto_show = true },
-	},
-	sources = { default = { "lsp", "path", "buffer", "snippets" } },
-	fuzzy = { implementation = "prefer_rust" },
+local cmp = require('blink.cmp')
+cmp.build():pwait()
+cmp.setup({
+  keymap = {
+    preset = "none",
+
+    ["<C-j>"] = { "select_next", "fallback" },
+    ["<C-k>"] = { "select_prev", "fallback" },
+    ["<CR>"] = { "accept", "fallback" },
+    ["<Tab>"] = { "accept", "fallback" },
+    ["<C-e>"] = { "cancel", "fallback" },
+  },
+  completion = {
+    documentation = { auto_show = true, auto_show_delay_ms = 200 },
+  },
+  sources = {
+    default = { "lsp", "path", "snippets", "buffer" },
+  },
+  fuzzy = { implementation = "prefer_rust_with_warning" },
 })
