@@ -14,6 +14,8 @@ vim.pack.add({
   "https://github.com/xiyaowong/transparent.nvim",
   "https://github.com/nvim-mini/mini.surround",
   "https://github.com/nvim-mini/mini.pairs",
+  "https://github.com/nvim-mini/mini.starter",
+  "https://github.com/scottmckendry/cyberdream.nvim",
 })
 
 require("plugins.oil")

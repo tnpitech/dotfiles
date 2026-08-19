@@ -21,3 +21,4 @@ require("kanagawa").setup({
   end,
 })
 require("tokyonight").setup()
+require("cyberdream").setup()

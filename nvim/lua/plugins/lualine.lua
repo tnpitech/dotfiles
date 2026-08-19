@@ -8,7 +8,7 @@ require("lualine").setup({
 		lualine_z = { 'location' }
 	},
   options = {
-    component_separators = "|",
+    component_separators = "",
     section_separators = "",
   },
 })

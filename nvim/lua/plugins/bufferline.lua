@@ -2,7 +2,7 @@ require("bufferline").setup({
   options = {
     mode = "buffers",
     diagnostics = "nvim_lsp",
-    separator_style = "slant", -- "slant", "thick", "padded_slash"
+    separator_style = "thick", -- "slant", "thick", "padded_slash"
     show_buffer_close_icons = true,
     show_close_icon = false,
     always_show_bufferline = false,
@@ -14,4 +14,4 @@ require("bufferline").setup({
 
 vim.keymap.set("n", "<Tab>", "<Cmd>BufferLineCycleNext<CR>", { desc = "Next buffer" })
 vim.keymap.set("n", "<S-Tab>", "<Cmd>BufferLineCyclePrev<CR>", { desc = "Prev buffer" })
-vim.keymap.set("n", "<C-d>", "<Cmd>bdelete<CR>", { desc = "Close buffer" })
+vim.keymap.set("n", "<C-q>", "<Cmd>bdelete<CR>", { desc = "Close buffer" })
