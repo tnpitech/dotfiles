@@ -3,6 +3,10 @@
 -- Settings
 hl.config({
     decoration = {
+        blur = {
+            passes = 2,
+            size = 2,
+        },
         rounding_power = 2.0,
         shadow = {
             range = 10,

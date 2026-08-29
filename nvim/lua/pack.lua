@@ -16,6 +16,7 @@ vim.pack.add({
   "https://github.com/nvim-mini/mini.pairs",
   "https://github.com/nvim-mini/mini.starter",
   "https://github.com/scottmckendry/cyberdream.nvim",
+  "https://github.com/folke/snacks.nvim",
 })
 
 require("plugins.oil")
@@ -27,3 +28,4 @@ require("plugins.lsp.lsp-config")
 require("plugins.lsp.mason")
 require("plugins.transparent")
 require("plugins.mini")
+require("plugins.snacks")

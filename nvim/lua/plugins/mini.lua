@@ -17,7 +17,7 @@ starter.setup({
   evaluate_single = true,
   items = {
     { name = "f Find file", action = "FFFFind",                                                   section = "Actions" },
-    { name = "r Recent",    action = "lua require('fff').find_files({ sort_by_recency = true })", section = "Action" },
+    { name = "r Recent",    action = "lua require('fff').find_files({ sort_by_recency = true })", section = "Actions" },
     { name = "e Explorer",  action = "Oil",                                                       section = "Actions" },
     { name = "q Quit",      action = "qa",                                                        section = "Actions" },
   },
