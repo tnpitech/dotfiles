@@ -11,14 +11,17 @@ vim.pack.add({
   "https://github.com/rebelot/kanagawa.nvim",
   "https://github.com/saghen/blink.lib",
   "https://github.com/saghen/blink.cmp",
-  "https://github.com/xiyaowong/transparent.nvim",
   "https://github.com/nvim-mini/mini.surround",
   "https://github.com/nvim-mini/mini.pairs",
   "https://github.com/nvim-mini/mini.starter",
   "https://github.com/scottmckendry/cyberdream.nvim",
   "https://github.com/folke/snacks.nvim",
+  "https://github.com/MeanderingProgrammer/render-markdown.nvim",
+  "https://github.com/chomosuke/typst-preview.nvim",
+  "https://github.com/navarasu/onedark.nvim",
 })
 
+vim.cmd.colorscheme("tokyonight")
 require("plugins.oil")
 require("plugins.fff")
 require("plugins.lualine")
@@ -26,6 +29,6 @@ require("plugins.bufferline")
 require("plugins.blink-cmp")
 require("plugins.lsp.lsp-config")
 require("plugins.lsp.mason")
-require("plugins.transparent")
 require("plugins.mini")
 require("plugins.snacks")
+require("plugins.render-markdown")

@@ -7,7 +7,8 @@ hl.config({
             passes = 2,
             size = 2,
         },
-        rounding_power = 2.0,
+        rounding = 7,
+        rounding_power = 6.0,
         shadow = {
             range = 10,
             render_power = 4,

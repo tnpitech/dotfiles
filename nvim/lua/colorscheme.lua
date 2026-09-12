@@ -20,5 +20,6 @@ require("kanagawa").setup({
     }
   end,
 })
-require("tokyonight").setup()
+require("onedark").setup()
+require("tokyonight").setup( { transparent = false })
 require("cyberdream").setup()
