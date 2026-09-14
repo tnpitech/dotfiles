@@ -17,25 +17,23 @@ local terminal = "kitty"
 local fileManager = "nautilus"
 local menu = "pkill rofi || bash ~/.config/rofi/launcher.sh"
 local waybar = "waybar"
+-- local qs = "qs --path ~/.config/quickshell/shell.qml"
 local awww = "awww-daemon"
 
 local restartWaybar = "~/.config/waybar/scripts/launch.sh"
 local exitHyprland = "command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"
-local setCursor = "hyprctl setcursor macOS 24"
 local screenshot = 'grim -g "$(slurp)" - | satty --filename - --copy-command wl-copy'
 
 -- Autostarts
 hl.on("hyprland.start", function()
 	hl.exec_cmd(waybar)
 	hl.exec_cmd(awww)
-	hl.exec_cmd(setCursor)
 	hl.exec_cmd("/usr/lib/xdg-desktop-portal-hyprland")
 	hl.exec_cmd("/usr/lib/xdg-desktop-portal-gtk")
 	hl.exec_cmd("/usr/lib/xdg-desktop-portal")
 end)
 
 -- Environment variables
-hl.env("XCURSOR_SIZE", "24")
 hl.env("HYPRCURSOR_SIZE", "24")
 hl.env("GDK_BACKEND", "wayland,x11,*")
 hl.env("QT_QPA_PLATFORM", "wayland;xcb")
@@ -253,18 +251,6 @@ hl.window_rule({
 
 	no_focus = true,
 })
-
--- hl.window_rule({
--- 	match = { class = "org.gnome.Nautilus" },
--- 	opacity = "0.85 override",
--- })
--- hl.window_rule({
--- 	match = { class = "xdg-desktop-portal-gtk" },
--- 	opacity = "0.9 override",
--- 	size = { 900, 600 },
--- 	float = true,
--- 	center = true,
--- })
 
 hl.window_rule({
 	match = { class = "org.nmrs.ui" },

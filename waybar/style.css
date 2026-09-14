@@ -4,8 +4,8 @@
 
 * {
   border: none;
-  font-family: "FantasqueSansM Nerd Font", "JetBrainsMono Nerd Font Propo";
-  font-size: 18px;
+  font-family:  "GoogleSansCode Nerd Font Propo";
+  font-size: 16px;
   min-height: 0;
   margin: 0;
   padding: 0;
@@ -21,6 +21,8 @@ window#waybar {
   border-bottom: 1px solid rgba(3, 3, 3, 0.5);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 1);
   padding: 2px;
+  transition-property: background-color;
+  transition-duration: .5s;
 }
 
 #workspaces button {
@@ -32,6 +34,7 @@ window#waybar {
 }
 #workspaces button.active {
   background: @highlight;
+  border-radius: 20%;
   color: @dark;
 }
 #workspaces button:hover {
@@ -61,5 +64,5 @@ tooltip {
 
 #custom-separator {
   color: #494748;
-  margin: 0 2px;
+  margin: 0 4px;
 }

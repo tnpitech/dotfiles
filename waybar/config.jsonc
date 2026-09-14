@@ -1,4 +1,6 @@
 {
+  "exclusive": true,
+  "reload_style_on_change": true,
   "layer": "top",
   "modules-left": ["hyprland/workspaces", "custom/separator","hyprland/window"],
   "modules-center": ["clock"],
@@ -6,31 +8,43 @@
     "hyprland/language", "custom/separator",
     "pulseaudio","custom/separator",
     "network","custom/separator",
-    "battery"],
+    "battery"], 
   "battery": {
-    "format": "bat: {capacity}%",
+    "format": " {capacity}%",
   },
   "clock": {
-    "format": "{:%H:%M %A, %B %d}"
+    "format": "{:%H:%M %a, %b %d}"
   },
   "pulseaudio": {
-    "format": "vol: {volume}%",
-    "format-bluetooth": "vol: {volume}%",
-    "format-muted": "vol: muted",
+    "format": "{icon} {volume}%",
+    "format-bluetooth": "vol {volume}%",
+    "format-muted": "  muted",
+    "format-icons": {
+      "default": ["", "", ""]
+    },
     "scroll-step": 1,
     "on-click": "pavucontrol",
     "ignored-sinks": ["Easy Effects Sink"]
   },
   "network": {
-    "format": "net: {ifname}",
-    "format-wifi": "net: {essid}",
-    "tooltip-format": "{ifname}",
-    "tooltip-format-wifi": "  {essid} {ipaddr} {signalStrength}%",
-    "tooltip-format-ethernet": "{ifname} {ipaddr}",
-    "tooltip-format-disconnected": "disconnected",
-    "format-disconnected": "net: disconnected", 
+    "format-icons": [
+      "󰤯",
+      "󰤟",
+      "󰤢",
+      "󰤥",
+      "󰤨"
+    ],
+    "format": "{icon}",
+    "format-wifi": "{icon}",
+    "format-ethernet": "󰌗 {ifname}",
+    "format-disconnected": "󰤮",
     "on-click": "nmrs",
-    "max-length": 50
+    "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+    "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+    "tooltip-format-disconnected": "Disconnected",
+    "interval": 3,
+    "spacing": 1,
+    // "on-click": "omarchy-launch-wifi"
   },
   "hyprland/workspaces": {
     "format": "{name}",
@@ -38,7 +52,7 @@
     "sort-by-number": true,
   },
   "hyprland/language": {
-    "format": "lang: {}",
+    "format": " {}",
     "format-en": "en",
     "format-th": "th",
     "keyboard-name": "ae68-pro-ae68-pro",
