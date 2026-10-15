@@ -9,7 +9,7 @@ hl.config({
     decoration = {
         blur = {
             passes = 2,
-            size = 2,
+            size = 3,
         },
         rounding = 7,
         rounding_power = 6.0,
@@ -25,4 +25,22 @@ hl.config({
         gaps_out = 6,
         resize_on_border = true,
     },
+})
+
+-- Monitors
+hl.monitor({
+    output = "HDMI-A-1",
+    disabled = false,
+    mode = "1920x1080@74.97Hz",
+    position = "1920x0",
+    scale = 1,
+    cm = "srgb",
+})
+hl.monitor({
+    output = "eDP-1",
+    disabled = false,
+    mode = "1920x1080@120.00Hz",
+    position = "0x20",
+    scale = 1,
+    cm = "srgb",
 })

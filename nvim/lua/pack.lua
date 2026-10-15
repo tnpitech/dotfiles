@@ -14,9 +14,14 @@ vim.pack.add({
   "https://github.com/folke/snacks.nvim",
   "https://github.com/chomosuke/typst-preview.nvim",
   "https://github.com/nvim-mini/mini.nvim",
+  "https://github.com/mrcjkb/rustaceanvim",
+  "https://github.com/rachartier/tiny-inline-diagnostic.nvim",
+  "https://github.com/iamcco/markdown-preview.nvim",
 })
 
 vim.cmd.colorscheme("tokyonight")
+require("plugins.rustaceanvim")
+require("plugins.tiny-diag")
 require("plugins.oil")
 require("plugins.fff")
 require("plugins.lualine")
@@ -26,4 +31,3 @@ require("plugins.lsp.lsp-config")
 require("plugins.lsp.mason")
 require("plugins.snacks")
 require("plugins.mini")
--- require("plugins.render-markdown")

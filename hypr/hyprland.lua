@@ -17,7 +17,6 @@ local terminal = "kitty"
 local fileManager = "nautilus"
 local menu = "pkill rofi || bash ~/.config/rofi/launcher.sh"
 local waybar = "waybar"
--- local qs = "qs --path ~/.config/quickshell/shell.qml"
 local awww = "awww-daemon"
 
 local restartWaybar = "~/.config/waybar/scripts/launch.sh"
@@ -281,3 +280,4 @@ hl.window_rule({
 
 -- HyprMod managed settings
 require("hyprland-gui")
+

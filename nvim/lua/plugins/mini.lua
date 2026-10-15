@@ -1,6 +1,13 @@
 require("mini.ai").setup()
 require("mini.surround").setup()
 require("mini.pairs").setup()
+require("mini.git").setup()
+require("mini.diff").setup({
+  view = {
+    style = "sign",
+    signs = { add = "┃", change = "┃", delete = "┃" }
+  },
+})
 local header_art =
 [[
 d888888b d8b   db d8888b. d888888b d888888b d88888b  .o88b. db   db
