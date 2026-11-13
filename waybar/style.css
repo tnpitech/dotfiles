@@ -1,68 +1,38 @@
-@define-color dark #000000;
-@define-color white #d4d0d1;
-@define-color highlight #00B4E0;
-
 * {
-  border: none;
-  font-family:  "GoogleSansCode Nerd Font Propo";
-  font-size: 15px;
-  min-height: 0;
-  margin: 0;
-  padding: 0;
-  transition: background-color 0.1s ease-out;
+    font-family: "DepartureMono Nerd Font";
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    min-height: 0;
 }
 
 window#waybar {
-  background-color: transparent;
+  background: #050505;
+  border: 2px solid #121212;
 }
 
 #waybar > box {
-  background-color: @dark;
-  border-bottom: 1px solid rgba(3, 3, 3, 0.5);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 1);
-  padding: 2px;
-  transition-property: background-color;
-  transition-duration: .5s;
+  padding: 1px 5px;
 }
 
 #workspaces button {
-  margin: 0 1px;
-  padding: 1px;
-  min-width: 20px;
-  border-radius: 0px;
-  transition: all 0.15s ease-in-out;
+  margin: 4px 2px;
+  padding: 0 2px;
+  background: #1c1c1c;
+  color: #e0e0e0;
+  border: 1px solid #555555;
+  border-radius: 2px;
 }
+
 #workspaces button.active {
-  background: linear-gradient(to right, #43b2ad, #00bcff);
-  border-radius: 5%;
-  color: @dark;
-}
-#workspaces button:hover {
-  background: @white;
-  color: @dark;
+  background: #FAFBEF;
+  color: #1c1c1c;
+  border: 1px solid #1c1c1c;
 }
 
-#window {
-  margin-left: 5px;
-}
-
-#clock,
 #pulseaudio,
-#network,
-#battery,
-#language {
-  color: @white;
-}
-#battery {
-  margin-right: 2px;
-}
-
-tooltip {
-  background: @dark;
-  color: @white;
-}
-
-#custom-separator {
-  color: #494748;
-  margin: 0 4px;
+#network {
+  margin-right: 10px;
 }

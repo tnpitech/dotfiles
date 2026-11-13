@@ -2,81 +2,30 @@
   "exclusive": true,
   "reload_style_on_change": true,
   "layer": "top",
-  "modules-left": ["hyprland/workspaces", "custom/separator","hyprland/window"],
-  "modules-center": ["clock"],
-  "modules-right": [
-    "hyprland/language", "custom/separator",
-    "pulseaudio","custom/separator",
-    "network","custom/separator",
-    "battery"], 
-  "battery": {
-    "format": "{icon} {capacity}%",
-    "format-charging": "{icon} {capacity}%",
-    "format-plugged": " {capacity}%",
-    "format-icons": {
-      "default": [
-        "",
-        "",
-        "",
-        "",
-        ""
-      ]
-    }
+  "modules-left": ["ext/workspaces"],
+  "modules-center": [],
+  "modules-right": ["network", "pulseaudio", "clock"],
+  "ext/workspaces": {
+    "format": "{name}",
+    "on-click": "activate",
+    "sort-by-id": true
   },
   "clock": {
-    "format": "{:%H:%M %a, %b %d}"
+    "format": "󰨲 {:%H:%M %a %d.%m}",
+    "tooltip-format": "{:%H.%M %A %d/%m/%Y}"
   },
   "pulseaudio": {
     "format": "{icon} {volume}%",
-    "format-bluetooth": "vol {volume}%",
-    "format-muted": "  muted",
+    "format-muted": " muted",
     "format-icons": {
-      "default": ["", "", ""]
+      "default": ""
     },
-    "scroll-step": 1,
-    "on-click": "pavucontrol",
-    "ignored-sinks": ["Easy Effects Sink"]
+    "on-click": "pavucontrol"
   },
   "network": {
-    "format-icons": [
-      "󰤯",
-      "󰤟",
-      "󰤢",
-      "󰤥",
-      "󰤨"
-    ],
-    "format": "{icon}",
-    "format-wifi": "{icon}",
-    "format-ethernet": "󰌗 {ifname}",
-    "format-disconnected": "󰤮",
-    "on-click": "nmrs",
-    "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
-    "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
-    "tooltip-format-disconnected": "Disconnected",
-    "interval": 3,
-    "spacing": 1,
-    // "on-click": "omarchy-launch-wifi"
-  },
-  "hyprland/workspaces": {
-    "format": "{name}",
-    "all-outputs": true,
-    "sort-by-number": true,
-  },
-  "hyprland/language": {
-    "format": " {}",
-    "format-en": "en",
-    "format-th": "th",
-    "keyboard-name": "ae68-pro-ae68-pro",
-    "on-click": "hyprctl switchxkblayout all next"
-  },
-  "hyprland/window": {
-    "format": "{class}",
-    "separate-outputs": true,
-    "icon": true,
-    "icon-size": 18
-  },
-  "custom/separator": {
-    "format": "∣",
-    "tooltip": false,
+    "interface": "enp2s0",
+    "format": " {ifname}",
+    "format-wifi": "󰤢 {essid}",
+    "format-disconnected": "󰖪 no network"
   }
 }

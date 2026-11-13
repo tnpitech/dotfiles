@@ -1,0 +1,17 @@
+configuration {
+	modes: "drun,run,window";
+	display-drun: "";
+	font: "DepartureMono Nerd Font 12";
+	show-icons: true;
+	sort: false;
+	sorting-method: "normal";
+	case-sensitive: false;
+	case-smart: true;
+	kb-row-up: "Up,Control+k";
+	kb-row-down: "Down,Control+j";
+	kb-remove-to-eol: "";
+	kb-accept-entry: "Return";
+	terminal: "kitty";
+}
+
+@theme "mytheme"
