@@ -1,7 +1,7 @@
 configuration {
 	modes: "drun,run,window";
 	display-drun: "";
-	font: "DepartureMono Nerd Font 12";
+	font: "DepartureMono Nerd Font 13";
 	show-icons: true;
 	sort: false;
 	sorting-method: "normal";

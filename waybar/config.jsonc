@@ -2,13 +2,27 @@
   "exclusive": true,
   "reload_style_on_change": true,
   "layer": "top",
-  "modules-left": ["ext/workspaces"],
+  "modules-left": [
+    "umbriel/workspaces",
+    "umbriel/window"
+  ],
   "modules-center": [],
-  "modules-right": ["network", "pulseaudio", "clock"],
-  "ext/workspaces": {
-    "format": "{name}",
+  "modules-right": [
+    "network",
+    "pulseaudio",
+    "battery",
+    "clock"
+  ],
+  "umbriel/workspaces": {
+    "format": "{icon}",
     "on-click": "activate",
-    "sort-by-id": true
+    "sort-by-name": true
+  },
+  "umbriel/window": {
+    "format": "{app_id}",
+    "icon": true,
+    "icon-size": 18,
+    "separate-outputs": true
   },
   "clock": {
     "format": "󰨲 {:%H:%M %a %d.%m}",
@@ -16,7 +30,7 @@
   },
   "pulseaudio": {
     "format": "{icon} {volume}%",
-    "format-muted": " muted",
+    "format-muted": "  muted",
     "format-icons": {
       "default": ""
     },
@@ -26,6 +40,27 @@
     "interface": "enp2s0",
     "format": " {ifname}",
     "format-wifi": "󰤢 {essid}",
-    "format-disconnected": "󰖪 no network"
+    "format-disconnected": "󰖪  no network"
+  },
+  "battery": {
+    "format": "{icon} {capacity}%",
+    "format-charging": "󱐋{capacity}%",
+    "format-plugged": "󱐋{capacity}%",
+    "format-icons": {
+      "default": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "charging": [
+        "󱐋",
+        "󱐋",
+        "󱐋",
+        "󱐋",
+        "󱐋"
+      ]
+    }
   }
 }

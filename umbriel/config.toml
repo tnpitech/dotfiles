@@ -27,7 +27,7 @@ layout = "us,th"
 options = "grp:alt_shift_toggle"
 
 [input.focus]
-follows_mouse = true
+follows_mouse = "always"
 hover_raises = false
 
 [input.cursor]
@@ -38,6 +38,8 @@ hide_when_typing = true
 "Mod+Return" = { action = "spawn kitty", repeat = false }
 "Mod+D" = "spawn rofi -show drun"
 "Mod+Q" = { action = "window-close", repeat = false }
+"Mod+W" = "spawn .config/rofi/wallpaper.sh"
+"Mod+S" = 'spawn grim -g "$(slurp)" - | satty -f -'
 "Mod+Escape" = "session-quit"
 
 # Focus and movement
@@ -114,3 +116,8 @@ match.title = "^notificationtoasts_.+_desktop"
 default_position = { x = 0, y = 0, anchor = "bottom_right" }
 default_focused = false
 default_pinned = true
+
+[[window_rule]]
+match.app_id = ["com.gabm.satty", "org.pulseaudio.pavucontrol", "xdg-desktop-portal-gtk"]
+default_floating = true
+default_floating_size_px = { width = 800, height = 600 }

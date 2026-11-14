@@ -1,0 +1,78 @@
+* {
+    bg:      #050505;
+    bg-alt:  #1c1c1c;
+    fg:      #e0e0e0;
+    fg-dim:  #707070;
+    border:  #2a2a2a;
+
+    background-color: transparent;
+    text-color: @fg;
+    margin: 0;
+    padding: 0;
+    spacing: 0;
+}
+
+window {
+    width: 900px;
+    background-color: @bg;
+    border: 1px;
+    border-color: @border;
+    border-radius: 0;
+}
+
+mainbox {
+    padding: 8px;
+    children: [inputbar, listview];
+}
+
+inputbar {
+    padding: 10px 12px;
+    spacing: 8px;
+    children: [prompt, entry];
+}
+
+prompt {
+    text-color: @fg-dim;
+}
+
+entry {
+    placeholder: "search wallpaper...";
+    placeholder-color: @fg-dim;
+}
+
+listview {
+    lines: 2;
+    columns: 4;
+    scrollbar: false;
+    fixed-height: true;
+    fixed-columns: true;
+    flow: horizontal;
+    spacing: 8px;
+    margin: 8px 0 0 0;
+}
+
+element {
+    orientation: vertical;
+    padding: 10px;
+    spacing: 8px;
+    border: 1px;
+    border-color: transparent;
+}
+
+element selected {
+    background-color: @bg-alt;
+    border-color: @border;
+    text-color: @fg;
+}
+
+element-icon {
+    size: 160px;
+    horizontal-align: 0.5;
+}
+
+element-text {
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
+    font: "DepartureMono Nerd Font 10";
+    text-color: inherit;
+}
