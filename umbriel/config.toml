@@ -6,6 +6,7 @@ files = []
 
 [general]
 autostart = ["awww-daemon", "waybar"]
+show_cheatsheet = false
 
 [appearance]
 corner_radius = 0
@@ -24,13 +25,15 @@ saturation = 1.1
 [input.keyboard]
 numlock_toggle = false
 layout = "us,th"
-options = "grp:alt_shift_toggle"
+options = "grp:alt_shift_toggle,caps:escape"
+repeat_delay = 250
 
 [input.focus]
 follows_mouse = "always"
 hover_raises = false
 
 [input.cursor]
+theme = "Adwaita"
 hide_when_typing = true
 
 [keybinds]
@@ -40,6 +43,7 @@ hide_when_typing = true
 "Mod+Q" = { action = "window-close", repeat = false }
 "Mod+W" = "spawn .config/rofi/wallpaper.sh"
 "Mod+S" = 'spawn grim -g "$(slurp)" - | satty -f -'
+"Mod+C" = "spawn umbriel msg cheatsheet-toggle"
 "Mod+Escape" = "session-quit"
 
 # Focus and movement
@@ -118,6 +122,6 @@ default_focused = false
 default_pinned = true
 
 [[window_rule]]
-match.app_id = ["com.gabm.satty", "org.pulseaudio.pavucontrol", "xdg-desktop-portal-gtk"]
+match.app_id = ["com.gabm.satty", "org.pulseaudio.pavucontrol", "xdg-desktop-portal-gtk", "nmrs"]
 default_floating = true
 default_floating_size_px = { width = 800, height = 600 }

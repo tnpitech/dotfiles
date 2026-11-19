@@ -29,23 +29,23 @@
     "tooltip-format": "{:%H.%M %A %d/%m/%Y}"
   },
   "pulseaudio": {
-    "format": "{icon} {volume}%",
-    "format-muted": "  muted",
+    "format": "{icon}{volume}%",
+    "format-muted": " muted",
     "format-icons": {
-      "default": ""
+      "default": " "
     },
     "on-click": "pavucontrol"
   },
   "network": {
-    "interface": "enp2s0",
     "format": " {ifname}",
     "format-wifi": "󰤢 {essid}",
-    "format-disconnected": "󰖪  no network"
+    "format-disconnected": "󰖪  no network",
+    "on-click": "nmrs"
   },
   "battery": {
     "format": "{icon} {capacity}%",
-    "format-charging": "󱐋{capacity}%",
-    "format-plugged": "󱐋{capacity}%",
+    "format-charging": "{icon}{capacity}%",
+    "format-plugged": "{icon}{capacity}%",
     "format-icons": {
       "default": [
         "",
@@ -55,11 +55,18 @@
         ""
       ],
       "charging": [
-        "󱐋",
-        "󱐋",
-        "󱐋",
-        "󱐋",
-        "󱐋"
+        "󱐋",
+        "󱐋",
+        "󱐋",
+        "󱐋",
+        "󱐋"
+      ],
+      "plugged": [
+        "󱐋",
+        "󱐋",
+        "󱐋",
+        "󱐋",
+        "󱐋"
       ]
     }
   }
